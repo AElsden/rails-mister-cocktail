@@ -1,7 +1,10 @@
 <h1><%= @cocktail[:name] %></h1>
 <div class=''>
-<%#= link_to "Create review", _path(@cocktail) %>
-</div>
+
+<%= link_to "Add Ingredients", new_cocktail_dose_path(@cocktail) %>
+
+<%= @dose.description %>
+
 
 <div class=''>
 <%= link_to 'back to list', cocktails_path %>
