@@ -1,5 +1,5 @@
 
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1485265449635-ca623a55e95c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80)">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path '15_Sidecar.jpg' %>');">
   <div class="container">
     <h1>The Norfolk 'n Chance</h1>
     <%= link_to 'Add Cocktails', new_cocktail_path, class: "btn btn-primary btn-lg" %>
@@ -12,8 +12,10 @@
   <div class="row">
     <% @cocktails.each do |cocktail| %>
     <div class="col-xs-12 col-sm-4">
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo, crop: :fill%>')">
-        <%= link_to cocktail.name, cocktail_path(cocktail) %>
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo, width: 400, height: 500, crop: :fill %>');">
+        <div class="card-description">
+          <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+        </div>
       </div>
     </div>
     <% end %>
