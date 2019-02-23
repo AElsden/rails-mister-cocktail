@@ -3,9 +3,14 @@
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
   background-position: center;
-  color: white;
+  color: white !important;
   position: relative;
 }
+
+h2 {
+  color: white;
+}
+
 .card-user {
   position: absolute;
   right: 10px;
